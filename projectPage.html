@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail - Jess</title>
+  <!-- SEO / Social tags: update `https://example.com` and placeholders to your real domain and data -->
+  <link rel="canonical" href="https://example.com/projectPage.html">
+  <meta name="description" content="Project case study by Jess, detailing process, challenges, and outcomes.">
+  <meta name="keywords" content="case study, project, UX, UI, design">
+  <meta name="author" content="Jess">
+  <meta name="geo.position" content="LAT;LON">
+  <meta name="geo.placename" content="City Name">
+  <meta name="geo.region" content="Region/State">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Project — Jess">
+  <meta property="og:description" content="Project case study by Jess, detailing process, challenges, and outcomes.">
+  <meta property="og:image" content="https://example.com/media/logo.png">
+  <meta property="og:url" content="https://example.com/projectPage.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project — Jess">
+  <meta name="twitter:description" content="Project case study by Jess, detailing process, challenges, and outcomes.">
+  <meta name="twitter:image" content="https://example.com/media/logo.png">
+
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="media/logo.png" type="image/png">
+
+  <!-- JSON-LD structured data (replace placeholders with real values) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://example.com/projectPage.html"
+    },
+    "headline": "Project — Jess",
+    "description": "Project case study by Jess, detailing process, challenges, and outcomes.",
+    "image": "https://example.com/media/logo.png"
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="head.js" defer></script>
+  <script src="footer.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="header-container"></div>
+
+  <main id="project-content">
+    <article class="project-article">
+      <header class="project-hero">
+        <div class="project-meta">
+          <h1>Web Design — E‑commerce Rebuild</h1>
+          <p class="project-role">Role: Product Designer — UX/UI, Prototyping, Visual Design</p>
+          <p class="project-summary">A responsive redesign of an e‑commerce site focused on clearer product discovery, streamlined checkout, and improved information architecture.</p>
+          <div class="project-actions">
+            <a href="gallery.html" class="btn">Back to Work</a>
+            <a href="media/web demo.mp4" class="btn">View Demo</a>
+          </div>
+        </div>
+        <div class="project-thumb">
+          <img src="media/webDesignScreens/mockup images.png" alt="Final mockup" class="project-thumb-img responsive-img" loading="lazy" decoding="async">
+        </div>
+      </header>
+
+      <section class="project-overview">
+        <h2>Overview</h2>
+        <p>This case study walks through research, wireframing, and visual screens produced during a full redesign. The final mockups and interactive demo demonstrate accessible layouts, clear CTAs, and consistent visual language across breakpoints.</p>
+      </section>
+
+      <section class="project-details">
+        <div class="project-column">
+          <h3>Problem</h3>
+          <p>Users struggled to find specific products quickly; the product pages were cluttered and the checkout flow had a high abandonment rate.</p>
+
+          <h3>My Role</h3>
+          <p>Created the UX and visual design—conducted competitor analysis, created wireframes, designed high fidelity screens, and produced the prototype used for usability testing.</p>
+
+          <h3>Tools</h3>
+          <p>Figma • Adobe Photoshop • Illustrator • HTML/CSS • InVision</p>
+        </div>
+
+        <div class="project-column">
+          <h3>Process</h3>
+          <p>Started with research and sketches, moved to low fidelity wireframes to explore layout changes, then iterated through high fidelity screens and responsive mockups.</p>
+
+          <h3>Outcome</h3>
+          <p>The redesign produced clearer navigation, a simplified checkout path, and a modern visual treatment reflected in the final mockups and interactive demo.</p>
+        </div>
+      </section>
+
+      <section class="project-wireframes">
+        <h2>Wireframes</h2>
+        <div class="carousel" aria-roledescription="carousel">
+          <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+          <div class="carousel-viewport" style="overflow:hidden;">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <figure>
+                  <img src="media/webDesignSampleWireframes/Homepage.png" alt="Wireframe - Homepage" class="responsive-img" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="carousel-slide">
+                <figure>
+                  <img src="media/webDesignSampleWireframes/Content Page.png" alt="Wireframe - Content Page" class="responsive-img" loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="carousel-slide">
+                <figure>
+                  <img src="media/webDesignSampleWireframes/Product Gallery.png" alt="Wireframe - Product Gallery" class="responsive-img" loading="lazy" decoding="async">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next slide">›</button>
+
+          <div class="carousel-indicators" role="tablist" aria-label="Wireframe slides">
+            <button data-slide="0" aria-label="Slide 1" class="is-active"></button>
+            <button data-slide="1" aria-label="Slide 2"></button>
+            <button data-slide="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+        <script>
+        (function(){
+          const carousel = document.currentScript.previousElementSibling; // .carousel
+          if(!carousel) return;
+          const track = carousel.querySelector('.carousel-track');
+          const slides = Array.from(track.children);
+          const prevBtn = carousel.querySelector('.carousel-btn.prev');
+          const nextBtn = carousel.querySelector('.carousel-btn.next');
+          const indicators = Array.from(carousel.querySelectorAll('.carousel-indicators [data-slide]'));
+          let idx = 0;
+
+          function update() {
+            const offset = -idx * carousel.querySelector('.carousel-viewport').offsetWidth;
+            track.style.transform = `translateX(${offset}px)`;
+            indicators.forEach((b,i)=> b.classList.toggle('is-active', i===idx));
+            prevBtn.disabled = idx === 0;
+            nextBtn.disabled = idx === slides.length - 1;
+          }
+
+          function go(n){ idx = Math.max(0, Math.min(n, slides.length-1)); update(); }
+
+          prevBtn.addEventListener('click', ()=> go(idx-1));
+          nextBtn.addEventListener('click', ()=> go(idx+1));
+          indicators.forEach(b=> b.addEventListener('click', (e)=> go(Number(e.currentTarget.dataset.slide))));
+
+          // resize observer to keep track transform correct on viewport resize
+          const ro = new ResizeObserver(()=> update());
+          ro.observe(carousel.querySelector('.carousel-viewport'));
+
+          // touch support
+          let startX = 0, deltaX = 0;
+          track.addEventListener('touchstart', (e)=> { startX = e.touches[0].clientX; }, {passive:true});
+          track.addEventListener('touchmove', (e)=> { deltaX = e.touches[0].clientX - startX; }, {passive:true});
+          track.addEventListener('touchend', ()=> {
+            if (Math.abs(deltaX) > 40) {
+              if (deltaX < 0) go(idx+1); else go(idx-1);
+            }
+            startX = 0; deltaX = 0;
+          });
+
+          // init
+          update();
+        })();
+        </script>
+      </section>
+
+      <section class="project-screens">
+        <h2>Screens & Mockups</h2>
+        <div class="gallery-grid project-gallery">
+          <figure><img src="media/webDesignScreens/homepage 1.png" alt="Homepage screen 1" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/homepage 2.png" alt="Homepage screen 2" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/homepage 3.png" alt="Homepage screen 3" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/homepage 4.png" alt="Homepage screen 4" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/products.png" alt="Products screen" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/Product Gallery.png" alt="Product gallery" class="responsive-img" loading="lazy" decoding="async" onerror="this.src='media/webDesignSampleWireframes/Product Gallery.png'"></figure>
+          <figure><img src="media/webDesignScreens/about us 1.png" alt="About us 1" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/about us 2.png" alt="About us 2" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/about us 3.png" alt="About us 3" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/contact.png" alt="Contact screen" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/my profile.png" alt="Profile screen" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/search.png" alt="Search screen" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/mobile.png" alt="Mobile screen" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/mobile Mockup.png" alt="Mobile mockup" class="responsive-img" loading="lazy" decoding="async"></figure>
+          <figure><img src="media/webDesignScreens/ipad view.png" alt="Tablet view" class="responsive-img" loading="lazy" decoding="async"></figure>
+        </div>
+      </section>
+
+      <section class="project-final">
+        <h2>Final Mockups & Demo</h2>
+        <div class="final-row">
+          <div>
+            <img src="media/webDesignScreens/mockup images.png" alt="Final mockup large" class="responsive-img" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <video controls class="responsive-video">
+              <source src="media/web demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+</body>
+</html>

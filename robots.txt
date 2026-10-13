@@ -1,0 +1,9 @@
+# robots.txt — allow all by default; update domain in sitemap reference
+User-agent: *
+Allow: /
+
+# Point to the sitemap (replace example.com with your production domain)
+Sitemap: https://example.com/sitemap.xml
+
+# If you need to block test folders, add directives below, e.g.:
+# Disallow: /staging/

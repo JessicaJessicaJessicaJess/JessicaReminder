@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jess - Portfolio</title>
+  <!-- SEO / Social tags: update `https://example.com` and placeholders to your real domain and data -->
+  <link rel="canonical" href="https://example.com/">
+  <meta name="description" content="Hi — I'm Jess. Product Designer & Digital Marketer creating user-centered and data-driven digital experiences.">
+  <meta name="keywords" content="product design, UX, UI, digital marketing, portfolio, Figma, web design">
+  <meta name="author" content="Jess">
+  <!-- Geo meta: replace LAT;LON and region/place with actual values -->
+  <meta name="geo.position" content="LAT;LON">
+  <meta name="geo.placename" content="City Name">
+  <meta name="geo.region" content="Region/State">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jess — Product Designer & Digital Marketer">
+  <meta property="og:description" content="Product Designer & Digital Marketer creating user-centered and data-driven digital experiences.">
+  <meta property="og:image" content="https://example.com/media/portfolio_homepage_img.png">
+  <meta property="og:url" content="https://example.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jess — Product Designer & Digital Marketer">
+  <meta name="twitter:description" content="Product Designer & Digital Marketer creating user-centered and data-driven digital experiences.">
+  <meta name="twitter:image" content="https://example.com/media/portfolio_homepage_img.png">
+
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="media/logo.png" type="image/png">
+
+  <!-- JSON-LD structured data (replace placeholders with real values) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jess",
+    "url": "https://example.com/",
+    "jobTitle": "Product Designer & Digital Marketer",
+    "image": "https://example.com/media/logo.png",
+    "sameAs": [],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "City Name",
+      "addressRegion": "Region/State",
+      "postalCode": "ZIP",
+      "addressCountry": "Country"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "LAT",
+      "longitude": "LON"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="head.js" defer></script>
+  <script src="footer.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="header-container"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm Jess. Product Designer & Digital Marketer.</h1>
+        <p class="hero-subtitle">I specialize in creating user centered and data driven digital experiences.</p>
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn">View Work</a>
+          <a href="media/Jessica_Reminder_Resume.pdf" class="btn-text" download>Download Resume</a>
+        </div>
+      </div>
+      <!-- Decorative image that overlaps the text -->
+      <div class="hero-decor" tabindex="0">
+        <img src="media/portfolio_homepage_img.png" alt="Portfolio hero" class="hero-decor-img">
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2>FEATURED CASE STUDIES</h2>
+      <div id="featured-projects" class="cards-grid"></div>
+    </section>
+
+    <section class="skills-section">
+      <h2>SKILLS & TOOLKIT SUMMARY</h2>
+      <p><strong>Design:</strong> Wireframing, Prototyping, Design Systems, User Research</p>
+      <p><strong>Marketing:</strong> Campaign Strategy, SEO/SEM, Content & Social Media</p>
+      <p><strong>Tools:</strong> Figma, Adobe CC, Webflow/HTML/CSS, Google Analytics</p>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+</body>
+</html>
