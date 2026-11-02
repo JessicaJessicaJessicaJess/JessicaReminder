@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="about.html">About</a>
         <a href="media/Jessica_Reminder_Resume.pdf" class="nav-resume" download>Download Resume</a>
       </nav>
-      <div class="breadcrumb" aria-label="Breadcrumb">
+››      <div class="breadcrumb" aria-label="Breadcrumb">
         <nav class="breadcrumb-inner">
           <a href="index.html">Home</a>
           <span class="crumb-sep">/</span>

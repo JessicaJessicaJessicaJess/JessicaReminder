@@ -866,6 +866,79 @@ img {
 }
 
 /* ==========================================================================
+   Image Lightbox
+   ========================================================================== */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+}
+
+.image-lightbox.is-open {
+  display: grid;
+  place-items: center;
+}
+
+.image-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(2px);
+}
+
+.image-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 1200px);
+  max-height: 90vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.image-lightbox-img {
+  width: auto;
+  max-width: 100%;
+  max-height: 82vh;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-m);
+  object-fit: contain;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 1.9rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-s);
+}
+
+.image-lightbox-close:hover { transform: scale(1.05); }
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* cue users that these images are interactive */
+.hero-image,
+.responsive-img,
+.project-thumb-img,
+.about-hero-image {
+  cursor: zoom-in;
+}
+
+/* ==========================================================================
    RESPONSIVE - small phone (<= 360px)
    ========================================================================== */
 @media (max-width: 360px) {

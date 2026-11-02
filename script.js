@@ -10,15 +10,23 @@ const projectsData = {
     shortSummary: "A complete UX/UI project with wireframes and responsive screens.",
     tags: ["UX", "UI", "Responsive"],
     heroImage: "media/webDesignScreens/mockup images.png",
-    overview: "Designed an end-to-end UX/UI solution including wireframes, screens, and final mockups for a responsive e‑commerce experience.",
-    research: "User interviews and heuristic evaluation informed information architecture improvements.",
+    overview: "Previous website had usability issues and outdated design. The redesign focused on improving navigation, accessibility, and overall user experience. Sadly, since the labor of editing the code directly was outsourced to an external developer, the final implementation did not match the proposed design. Here you can view my redesign proposal.",
+    research: "After conducting user interviews and analyzing competitor sites, I identified key pain points in the existing design and opportunities for improvement. This informed the creation of user personas and task flows that guided the wireframing process. I spent the previous six months gathering insights from user testing and analytics to inform the redesign, focusing on improving navigation, accessibility, and overall user experience utiliziling company research and data from platforms such as FullStory.",
     explorationImages: [
       "media/webDesignSampleWireframes/Homepage.png",
       "media/webDesignSampleWireframes/Content Page.png",
       "media/webDesignSampleWireframes/Product Gallery.png"
     ],
-    finalPrototype: "media/web demo.mp4",
-    results: "Delivered a cohesive visual system and improved task completion in prototype testing."
+    finalImages: [
+      "media/webDesignScreens/mockup images.png",
+      "media/webDesignScreens/homepage 1.png",
+      "media/webDesignScreens/products.png",
+      "media/webDesignScreens/search.png",
+      "media/webDesignScreens/mobile.png",
+      "media/webDesignScreens/ipad view.png"
+    ],
+    finalPrototype: "media/webDesignScreens/mockup images.png",
+    results: "Besides the fact that the final implementation did not match the proposed design, the redesign proposal was well-received by stakeholders and provided a clear direction for future development. The project highlighted the importance of maintaining design integrity during implementation and the need for better communication between design and development teams."
   },
   
   5: {
@@ -181,6 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("featured-projects")) {
     renderFeaturedProjects();
   }
+
+  initLightbox();
   // Page-level breadcrumb defaults (index/about)
   const path = window.location.pathname.split('/').pop();
   if (path === '' || path === 'index.html') {
@@ -189,6 +199,65 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBreadcrumb([{ label: 'Home', href: 'index.html' }, { label: 'About' }]);
   }
 });
+
+function initLightbox() {
+  if (document.getElementById('image-lightbox')) return;
+
+  const lightbox = document.createElement('div');
+  lightbox.id = 'image-lightbox';
+  lightbox.className = 'image-lightbox';
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightbox.innerHTML = `
+    <div class="image-lightbox-backdrop" data-close-lightbox></div>
+    <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button type="button" class="image-lightbox-close" aria-label="Close image preview" data-close-lightbox>×</button>
+      <img src="" alt="Expanded image" class="image-lightbox-img" />
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('.image-lightbox-img');
+
+  function openLightbox(src, alt) {
+    if (!src) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || 'Expanded image';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+    lightboxImg.src = '';
+  }
+
+  document.addEventListener('click', (event) => {
+    const closeTarget = event.target.closest('[data-close-lightbox]');
+    if (closeTarget) {
+      closeLightbox();
+      return;
+    }
+
+    const clickedImage = event.target.closest('img');
+    if (!clickedImage) return;
+
+    if (clickedImage.closest('a')) return;
+
+    const eligible = clickedImage.matches('.responsive-img, .hero-image, .about-hero-image, .project-thumb-img, .final-figure img, .small-slide img, .hero-decor-img');
+    if (!eligible) return;
+
+    openLightbox(clickedImage.currentSrc || clickedImage.src, clickedImage.alt);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+}
 
 // Helper: update breadcrumb in header
 function updateBreadcrumb(items) {
